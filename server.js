@@ -1,5 +1,13 @@
 import express from 'express';
 
+const posts = [
+  {
+    description: 'uma foto teste',
+    title: 'Hello World!',
+   imagem: 'https://placecats.com/millie/300/150',
+  }
+]
+
 const app = express(); // cria variavel app que é uma instancia do express
 
 app.listen(3000, () => {
