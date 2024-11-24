@@ -18,58 +18,7 @@ try {
   process.exit(1); // Encerra a aplicação com código de saída 1 indicando erro
 }
 
-//passei esse json para o banco de dados do MongoDB
-// const posts = [ //json posts
-//   {
-//     id: 1,
-//     description: 'uma foto teste',
-//     title: 'Hello World!',
-//     imagem: 'https://placecats.com/millie/300/150',
-//   },
-//   {
-//     id: 2,
-//     description: 'Um lindo pôr do sol na praia',
-//     title: 'Pôr do Sol Magnífico',
-//     imagem: 'https://placecats.com/millie/300/150',
-//   },
-//   {
-//     id: 3,
-//     description: 'Meu gato fazendo pose para a câmera',
-//     title: 'Meu Felino Favorito',
-//     imagem: 'https://placecats.com/millie/300/150',
-//   },
-//   {
-//     id: 4,
-//     description: 'Uma deliciosa receita de bolo de chocolate',
-//     title: 'Bolo de Chocolate Irresistível',
-//     imagem: 'https://placecats.com/millie/300/150',
-//   },
-//   {
-//     id: 5,
-//     description: 'Montanhas nevadas em um dia ensolarado',
-//     title: 'Paisagem Alpina',
-//     imagem: 'https://placecats.com/millie/300/150',
-//   },
-//   {
-//     id: 6,
-//     description: 'Um buquê de flores coloridas',
-//     title: 'Um Presente Especial',
-//     imagem: 'https://placecats.com/millie/300/150',
-//   },
-//   {
-//     id: 7,
-//     description: 'Um buquê de flores coloridas',
-//     title: 'Um Presente Especial',
-//     imagem: 'https://placecats.com/millie/300/150',
-//   }
-// ];
-
-// Função para gerar um ID único
-
-
-
-// console.log(posts);
-
+// Cria uma instância do Express e armazena na variável 'app'.
 const app = express(); // cria variavel app que é uma instancia do express
 app.use(express.json()); // habilita o uso do json no express
 
@@ -91,14 +40,3 @@ app.get('/posts', async (req, res) => {
   res.status(200).json(posts);
 });
 
-// function buscarPorID(id) {
-//   return posts.findIndex((post) => {
-//     return post.id === Number(id);
-//   })
-// }
-
-// cria uma rota que retorna um post específico
-// app.get('/posts/:id', (req, res) => {
-//   const index = buscarPorID(req.params.id);
-//   res.status(200).json(posts[index]);
-// }); 
